@@ -11,6 +11,31 @@ $icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/boots
 	padding: 0.2em 0;
 }
 
+/* GLOBAL PAGE FADE IN
+ ------------- */
+.fade-in {
+    animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+    -o-animation: fadein 3s; /* Opera */
+}
+@keyframes fadein {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+@-moz-keyframes fadein { /* Firefox */
+    from { opacity:0;}
+    to { opacity:1;}
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from { opacity:0;}
+    to {opacity:1;}
+}
+@-o-keyframes fadein { /* Opera */
+    from {opacity:0;}
+    to {opacity: 1;}
+}
+
 // Colors
 $color-yellow: #e4e59f;
 
@@ -83,6 +108,10 @@ a:hover {
 	transition: opacity 0.5s ease;
 	padding-top: 0px;
 
+	.nav-list {
+		margin: 6% auto;
+	}
+
 	.nav-item {
 		color: #000;
 		transition: color .5s ease;
@@ -143,12 +172,24 @@ a:hover {
 // main bg image
 .bg-index {
 	background: url(../images/bg/blossom.jpg) no-repeat center center fixed; 
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-	  clear: both;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-background-size: 100%; 
+	-moz-background-size: 100%; 
+	-o-background-size: 100%; 
+	background-size: 100%;
+	clear: both;
+
+	
 }
+
+@media screen and (max-width: 320px) {
+	.bg-index {
+		background-attachment: scroll;
+    	}
+ }
 
 .index-content {
 	margin-top: 20%;
@@ -161,8 +202,11 @@ a:hover {
 .about-header {
 	background: url(../images/bg/greenhouse-rows-small.jpg);
 	background-repeat: no-repeat;
-	background-size: 100%;
 	height: 200px;
+	-webkit-background-size: 100%; 
+	-moz-background-size: 100%; 
+	-o-background-size: 100%; 
+	background-size: 100%;
 }
 
 .about-title {
@@ -336,6 +380,10 @@ footer {
 		.list-inline > li {
 			padding: 0 5px;
 		}
+
+		.nav-list {
+			margin: 1% 0 1% 0;
+		}
 	}
 
 	.nav-list {
@@ -370,6 +418,10 @@ footer {
 		background-repeat: no-repeat;
 		background-size: 100%;
 		height: 275px;
+		-webkit-background-size: 100%; 
+		-moz-background-size: 100%; 
+		-o-background-size: 100%; 
+		background-size: 100%;
 	}
 
 	.about-title {
